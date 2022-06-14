@@ -1,0 +1,27 @@
+doctype html 
+html
+    head 
+        title This is title 
+        style 
+            include ../static/style.css
+    body 
+
+        nav#navbar 
+            ul 
+                li #[a(href="/") Home] 
+                li #[a(href="/") About]
+                li #[a(href="/") Serivces]
+                li #[a(href="/") Blog]
+                li #[a(href="/") Contact]    
+            
+        section#introSection
+            | section for picture
+        section#sponsorsSection
+            | section for sponsors
+
+        footer#footer
+            | our footer here
+
+
+        script 
+            include ../static/index.js

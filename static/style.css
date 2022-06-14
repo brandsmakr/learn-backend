@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#navbar{
+    background-color: aqua;
+    padding: 15px 12px;
+    font-size: x-large;
+    font-family: 'Playball', cursive;
+}
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#navbar li
+{
+    list-style-type: none;
+}
+#navbar li a{
+    text-decoration: none;
+    padding: 14px 18px;
+}
+#introSection{
+    /* background: center / contain no-repeat url('../static/bg.jpg'), #eee 35% url('../static/image.png'); */
+    background: center / cover no-repeat url('../static/bg.jpg');
+    height: 300px;
+    color: white;
+    /* background-color: antiquewhite; */
+}
+#sponsorsSection{
+    height: 300px;
+    background-color: cadetblue;
+}
+#footer{
+    height: 100px;
+    background-color: black;
+    color: white;
+}
