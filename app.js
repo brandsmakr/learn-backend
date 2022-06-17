@@ -18,6 +18,19 @@ app.get('/', (req, res)=>{
     const con = 'This is the best content on the internet so far use it wisely';
     const params = {
     };
+    res.status(200).render('home.pug', params);
+});
+app.get('/contact', (req, res)=>{
+    const con = 'This is the best content on the internet so far use it wisely';
+    const params = {
+    };
+    res.status(200).render('contact.pug', params);
+});
+
+app.get('/index', (req, res)=>{
+    const con = 'This is the best content on the internet so far use it wisely';
+    const params = {
+    };
     res.status(200).render('index.pug', params);
 });
 

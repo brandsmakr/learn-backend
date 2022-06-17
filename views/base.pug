@@ -1,0 +1,23 @@
+doctype html 
+html 
+    head 
+        title Dance Academy
+        block scripts 
+        block style
+    body 
+        nav#navbar 
+            div#logo
+                img(src='../static/img/logo.png')
+                | HDA
+            ul 
+                li #[a(href="/") Home] 
+                li #[a(href="/") About]
+                li #[a(href="/") Serivces]
+                li #[a(href="/") Blog]
+                li #[a(href="/contact") Contact]
+
+        block content 
+        
+        block foot 
+            footer#footer
+                | our  footer  here
