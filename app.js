@@ -3,6 +3,17 @@ const path = require('path');
 const app = express();
 const port = 8242;
 
+// mongoose connection
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/dance_academy', 
+{useNewUrlParser:true}, {useUnifiedTopology: true});
+
+// definig mongoose schema
+const danceContact = mongoose.Schema({
+
+});
+var contact = mongoose.model('contact', danceContact);
+
 // app.use(express.static('static', options));
 
 // express specific stuff
