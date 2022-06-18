@@ -3,14 +3,20 @@ const path = require('path');
 const app = express();
 const port = 8242;
 
+const bodyParser = require('body-parser');
+
 // mongoose connection
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/dance_academy', 
 {useNewUrlParser:true}, {useUnifiedTopology: true});
 
 // definig mongoose schema
 const danceContact = mongoose.Schema({
-
+    name: String,
+    phone: String,
+    email: String,
+    adress: String,
+    desc: String
 });
 var contact = mongoose.model('contact', danceContact);
 
@@ -36,6 +42,15 @@ app.get('/contact', (req, res)=>{
     const params = {
     };
     res.status(200).render('contact.pug', params);
+});
+app.post('/contact', (req, res)=>{
+    var my_data = new contact(req.body);
+    my_data.save().then(()=>{
+        res.send("This items has been saved to the database");
+    }).catch(()=>{
+        res.status(400).send("This items was not saved to the database");
+    })
+    // res.status(200).render('contact.pug');
 });
 
 app.get('/index', (req, res)=>{
